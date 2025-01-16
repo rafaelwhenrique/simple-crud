@@ -1,66 +1,101 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Crud Project 
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This is a basic CRUD (Create, Read, Update, Delete) project built with Laravel. It allows you to create, view, update, and delete users. This project is configured to run in a XAMPP environment.
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [XAMPP](https://www.apachefriends.org/index.html) installed (including Apache, MySQL, PHP)
+- [Composer](https://getcomposer.org/) installed
+- [Git](https://git-scm.com/) installed
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. **Clone the repository:**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+   ```sh
+   git clone https://github.com/rafaelwhenrique/simple-crud.git
+   cd basic-crud
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+2. **Install Composer dependencies**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+   ```sh
+   composer install
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+3. **Copy the .env example file and configure environment variables:**
 
-## Contributing
+   ```sh
+   cp .env.example .env
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. **Open the .env file and configure the following variables according to your XAMPP setup:**
 
-## Code of Conduct
+   ```sh
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=your_database_name
+    DB_USERNAME=your_mysql_username
+    DB_PASSWORD=your_mysql_password
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. **Generate an application key:**
 
-## Security Vulnerabilities
+   ```sh
+   php artisan key:generate
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. **Run migrations to create database tables**
 
+   ```sh
+   php artisan migrate
+
+7. **Start the Laravel local development server:**
+
+   ```sh
+   php artisan serve
+
+The application will be available at http://localhost:8000.
+
+## Usage
+
+1. **Create User**
+    1. Go to http://localhost:8000/users/create.
+    2. Fill in the form with the user's details and click "Save".
+
+1. **View Users**
+    1. Go to http://localhost:8000/users.
+    2. See the list of registered users.
+
+1. **Edit User**
+    1. Go to http://localhost:8000/users and click "Edit" next to the user you want to edit.
+    2. Update the user's details and click "Save".
+
+1. **Delete User**
+    1. Go to http://localhost:8000/users.
+    2. Click the "Delete" button next to the user you want to delete.
+    3. Confirm the deletion in the confirmation modal.
+
+*** Project Structure ***
+    ```sh
+    1. app/Http/Controllers/UserController.php: Controller responsible for CRUD operations.
+    2. resources/views/users/: Directory containing the Blade views for creating, editing, listing, and viewing users.
+    3. routes/web.php: Routes file where the CRUD routes are defined.
+
+*** Contribution ***
+    ```sh
+    1. Fork the project.
+    2. Create a new branch (git checkout -b feature/new-feature).
+    3. Commit your changes (git commit -m 'Add new feature').
+    4. Push to the branch (git push origin feature/new-feature).
+    5. Open a Pull Request.
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    
+## Author ##
+    - Rafael Henrique
+
+### Conclusion
+
+    With this `README.md`, anyone who wants to use or contribute to your project will have clear instructions on how to set up the environment, install dependencies, and use the CRUD functionalities. If you need more adjustments or have any other questions, feel free to ask!
+
+
