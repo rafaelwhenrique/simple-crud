@@ -9,7 +9,7 @@
                 </span>
             </div>
         </div>
-        <x-alert />
+        
         <table class="table table-striped table-bordered border-primary text-center table-sm">
             <thead>
                 <tr>
