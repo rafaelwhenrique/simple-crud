@@ -58,44 +58,44 @@ The application will be available at http://localhost:8000.
 ## Usage
 
 1. **Create User**
-    1. Go to http://localhost:8000/users/create.
-    2. Fill in the form with the user's details and click "Save".
+    - Go to http://localhost:8000/users/create.
+    - Fill in the form with the user's details and click "Save".
 
 1. **View Users**
-    1. Go to http://localhost:8000/users.
-    2. See the list of registered users.
+    - Go to http://localhost:8000/users.
+    - See the list of registered users.
 
 1. **Edit User**
-    1. Go to http://localhost:8000/users and click "Edit" next to the user you want to edit.
-    2. Update the user's details and click "Save".
+    - Go to http://localhost:8000/users and click "Edit" next to the user you want to edit.
+    - Update the user's details and click "Save".
 
 1. **Delete User**
-    1. Go to http://localhost:8000/users.
-    2. Click the "Delete" button next to the user you want to delete.
-    3. Confirm the deletion in the confirmation modal.
+    - Go to http://localhost:8000/users.
+    - Click the "Delete" button next to the user you want to delete.
+    - Confirm the deletion in the confirmation modal.
 
 *** Project Structure ***
-    ```sh
-    1. app/Http/Controllers/UserController.php: Controller responsible for CRUD operations.
-    2. resources/views/users/: Directory containing the Blade views for creating, editing, listing, and viewing users.
-    3. routes/web.php: Routes file where the CRUD routes are defined.
+
+1. app/Http/Controllers/UserController.php: Controller responsible for CRUD operations.
+2. resources/views/users/: Directory containing the Blade views for creating, editing, listing, and viewing users.
+3. routes/web.php: Routes file where the CRUD routes are defined.
 
 *** Contribution ***
-    ```sh
-    1. Fork the project.
-    2. Create a new branch (git checkout -b feature/new-feature).
-    3. Commit your changes (git commit -m 'Add new feature').
-    4. Push to the branch (git push origin feature/new-feature).
-    5. Open a Pull Request.
+
+1. Fork the project.
+2. Create a new branch (git checkout -b feature/new-feature).
+3. Commit your changes (git commit -m 'Add new feature').
+4. Push to the branch (git push origin feature/new-feature).
+5. Open a Pull Request.
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
     
-## Author ##
-    - Rafael Henrique
+### Author ##
+- Rafael Henrique
 
 ### Conclusion
-
-    With this `README.md`, anyone who wants to use or contribute to your project will have clear instructions on how to set up the environment, install dependencies, and use the CRUD functionalities. If you need more adjustments or have any other questions, feel free to ask!
+With this `README.md`, anyone who wants to use or contribute to your project will have clear instructions on how to set up the environment, install dependencies, and use the CRUD functionalities. If you need more adjustments or have any other questions, feel free to ask!
 
 
