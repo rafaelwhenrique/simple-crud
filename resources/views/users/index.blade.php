@@ -9,7 +9,7 @@
                 </span>
             </div>
         </div>
-        
+
         <table class="table table-striped table-bordered border-primary text-center table-sm">
             <thead>
                 <tr>
@@ -42,7 +42,8 @@
                                     style="display:inline">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                    <button type="submit" class="btn btn-danger btn-sm"
+                                        onclick="return confirm('Are you sure to delete this?')">Delete</button>
                                 </form>
                             </div>
                         </td>
