@@ -74,19 +74,19 @@ The application will be available at http://localhost:8000.
     - Click the "Delete" button next to the user you want to delete.
     - Confirm the deletion in the confirmation modal.
 
-*** Project Structure ***
+## Project Structure 
 
-1. app/Http/Controllers/UserController.php: Controller responsible for CRUD operations.
-2. resources/views/users/: Directory containing the Blade views for creating, editing, listing, and viewing users.
-3. routes/web.php: Routes file where the CRUD routes are defined.
+   1. app/Http/Controllers/UserController.php: Controller responsible for CRUD operations.
+   2. resources/views/users/: Directory containing the Blade views for creating, editing, listing, and viewing users.
+   3. routes/web.php: Routes file where the CRUD routes are defined.
 
-*** Contribution ***
+## Contribution 
 
-1. Fork the project.
-2. Create a new branch (git checkout -b feature/new-feature).
-3. Commit your changes (git commit -m 'Add new feature').
-4. Push to the branch (git push origin feature/new-feature).
-5. Open a Pull Request.
+   1. Fork the project.
+   2. Create a new branch (git checkout -b feature/new-feature).
+   3. Commit your changes (git commit -m 'Add new feature').
+   4. Push to the branch (git push origin feature/new-feature).
+   5. Open a Pull Request.
 
 ## License
 
