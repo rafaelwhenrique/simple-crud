@@ -49,12 +49,14 @@ class UserController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|max:255',
-            'email' => 'required|email|unique:users,email,' . $id,
+            'email' => 'required|email|max:255|unique:users,email,' . $id,
         ]);
 
         $user = User::findOrFail($id);
-        $user->update($validatedData);
-        return response()->json($user);
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->save();
+        return redirect()->route('users.index')->with('success', 'User edited successfully.');
     }
 
     public function destroy($id)
